@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Controller.MainActivity">
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#292929">
+
+
+        <TextView
+            android:id="@+id/textViewNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do Local"
+            android:textColor="#949494"
+            android:layout_marginTop="30dp"
+            android:textSize="22sp"
+            />
+
+        <AutoCompleteTextView
+            android:id="@+id/locais"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:textColor="#949494"
+            android:textSize="20sp"
+            android:layout_below="@+id/textViewNome"
+            />
+        <TextView
+            android:id="@+id/textViewCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoria do Local"
+            android:textColor="#949494"
+            android:textSize="22sp"
+            android:layout_marginTop="30dp"
+            android:layout_alignStart="@id/textViewNome"
+            android:layout_below="@+id/locais"
+            />
+
+        <Spinner
+            android:id="@+id/SpinnerCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/textViewCategoria"
+            android:layout_below="@id/textViewCategoria"
+            android:textColor="#949494"
+            android:textSize="20sp"
+            android:prompt="@string/texto_combo"
+            >
+        </Spinner>
+
+        <TextView
+            android:id="@+id/textViewGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posicionamento Global"
+            android:layout_centerHorizontal="true"
+            android:textColor="#C1C1C1"
+            android:textSize="22sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/SpinnerCategoria"
+            />
+
+        <TextView
+            android:id="@+id/textViewLatitude"
+            android:tag="latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewGlobal"
+            android:text="Latitude:    "
+            android:textSize="20sp"
+            android:textColor="#949494"
+            />
+        <TextView
+            android:id="@+id/textViewLongitude"
+            android:tag="longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:layout_below="@id/textViewLatitude"
+            android:text="Longitude:    "
+            android:textColor="#949494"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHECK-IN"
+            android:textSize="30sp"
+            android:background="@color/grey"
+            android:layout_marginTop="60dp"
+            android:textColor="#949494"
+            android:layout_below="@id/textViewLatitude"
+            android:layout_centerHorizontal="true"
+            android:onClick="Checkin"
+            >
+        </Button>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Controller.TelaGestao">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#292929">
+
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Locais Mais Visitados"
+            android:textStyle="bold"
+            android:textColor="#949494"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+
+            />
+
+        <TextView
+            android:id="@+id/textViewSubTitulo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCAL:"
+            android:textColor="#949494"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewTitulo"
+            android:layout_alignParentLeft="true"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/textViewSubTitulo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXCLUIR?"
+            android:textColor="#949494"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewTitulo"
+            android:layout_alignParentRight="true"
+            android:textSize="25sp"
+            />
+
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textViewSubTitulo1">
+
+            <LinearLayout
+                android:id="@+id/layoutgeral"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layoutConteudo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="left"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1"
+                    >
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutDeletar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_weight="10">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
